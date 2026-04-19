@@ -1,0 +1,116 @@
+:root {
+  --page-bg: #d4f1d6;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  background: var(--page-bg);
+  transition: background-color 0.6s ease;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.scene-shell {
+  position: fixed;
+  inset: 0;
+  background: var(--page-bg);
+  transition: background-color 0.6s ease;
+}
+
+.product-canvas {
+  position: fixed !important;
+  inset: 0;
+  z-index: 2;
+}
+
+.fixed-ui {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.ui-card {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 44vw;
+  height: 62vh;
+  transform: translateY(-50%);
+  background: var(--section-card);
+  opacity: 0.9;
+  transition: background-color 0.4s ease;
+}
+
+.ui-accent {
+  position: absolute;
+  left: 33vw;
+  top: 50%;
+  width: 15vw;
+  height: 15vw;
+  min-width: 180px;
+  min-height: 180px;
+  max-width: 260px;
+  max-height: 260px;
+  transform: translate(-50%, -50%);
+  background: var(--section-accent);
+  border-radius: 58% 42% 52% 48% / 44% 56% 46% 54%;
+  transition: background-color 0.6s ease;
+}
+
+.ui-copy {
+  position: absolute;
+  left: 8vw;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24vw;
+  min-width: 260px;
+  color: var(--section-text);
+  transition: color 0.6s ease;
+}
+
+.ui-copy h1 {
+  margin: 0;
+  font-size: clamp(64px, 9vw, 150px);
+  line-height: 0.82;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+}
+
+.ui-subtitle {
+  margin-top: 18px;
+  margin-bottom: 12px;
+  font-size: clamp(12px, 1vw, 16px);
+  letter-spacing: 0.22em;
+  font-weight: 800;
+}
+
+.ui-description {
+  margin: 0;
+  max-width: 280px;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.ui-meta {
+  position: absolute;
+  right: 6vw;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--section-text);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  transition: color 0.6s ease;
+}
